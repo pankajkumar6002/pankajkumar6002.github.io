@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pankaj Kumar - PhD scholar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            color: #343a40;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        header h1 {
+            margin-bottom: 2px;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 0;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 12px;
+            font-size: 2rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .research-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .research-item {
+            background-color: #ffffff;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .research-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .research-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .research-item p {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .research-item a {
+            text-decoration: none;
+            color: #0078d7;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .research-item a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .research-item a i {
+            margin-left: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            color: #495057;
+        }
+
+        ul li a {
+            color: #0078d7;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        ul li a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #e9ecef;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        footer p {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        a {
+            color: #0078d7;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        #contact p a i {
+            margin-left: 5px;
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                width: 80%;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .research-item h3 {
+                font-size: 1.4rem;
+            }
+
+            ul li {
+                font-size: 1.1rem;
+            }
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .main-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+            .sidebar {
+                width: 300px;
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+
+            .content-area {
+                flex: 1;
+            }
+        }
+
+        .sidebar {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.03);
+        }
+
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 600;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.03);
+        }
+
+        .sidebar p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            color: #495057;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #495057;
+        }
+
+        .sidebar ul li a {
+            color: #0078d7;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .sidebar ul li a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .content-area {
+            flex: 1;
+            padding-bottom: 100px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        .contact-info a {
+            color: #0078d7;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .contact-info i {
+            margin-right: 5px;
+        }
+
+        .nav-link{
+            color:#0078d7;
+            text-decoration: none;
+        }
+
+        .nav-link:hover{
+            color:#0056b3;
+            text-decoration: underline;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-title {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        .nav-menu li{
+            margin-bottom: 0;
+        }
+
+        #about .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+
+        #about .about-content {
+            margin-top: 0;
+        }
+
+        @media (min-width: 768px) {
+            #about .container {
+                flex-direction: row;
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            #about img {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+
+            #about .about-content {
+                margin-top: 0;
+            }
+        }
+
+        .caption {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+
+        .contact-info a {
+            color: #0078d7;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .contact-info i {
+            margin-right: 5px;
+        }
+
+        @media (min-width: 768px) {
+            #about .container {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            #about img {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            #about .about-content {
+                flex: 1;
+                margin-top: 0;
+            }
+           .caption {
+                text-align: left;
+            }
+            .contact-info{
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #about .container {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            #about img {
+                margin-right: 20px;
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+
+            .image-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-right: 70px;
+            }
+
+            #about .about-content {
+                flex: 1;
+                margin-top: 0;
+            }
+
+            .caption {
+                text-align: left;
+                margin-left: 0;
+            }
+
+            .contact-info {
+                text-align: left;
+                margin-top: 10px;
+                margin-left: 0;
+            }
+        }
+
+        #about {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        #research{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        #publications{
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .collapsible {
+            background-color: #f0f0f0;
+            color: #2c3e50;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #e9ecef;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
+            font-weight: 500;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .collapsible:hover {
+            background-color: #e0e0e0;
+        }
+
+        .collapsible.active {
+            background-color: #d0d0d0;
+        }
+
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #ffffff;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .content.show {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .content p{
+            color: #495057;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .content a{
+            color: #0078d7;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .content a:hover{
+             color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .project-item {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: #495057;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: #0078d7;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .project-link:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        .project-link i {
+            margin-left: 5px;
+            font-size: 1rem;
+        }
+
+        .date-details {
+            font-size: 0.8rem;
+            color: #6c757d;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class = "header-title">
+                <h1>Pankaj Kumar</h1>
+                <p>AI/ML Research Scholar</p>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#about" class = "nav-link">About</a></li>
+                    <li><a href="#research" class = "nav-link">Research</a></li>
+                    <li><a href="#publications" class = "nav-link">Publications</a></li>
+                    <li><a href="#teachings" class = "nav-link">Teachings</a></li>
+                    <li><a href="#Blogs and Talks" class = "nav-link">Blogs</a></li>
+                    <li><a href="#CV" class = "nav-link">CV</a></li>
+                </ul>
+            </nav>
+</div>
+    </header>
+
+    <div class="container main-content">
+
+
+        <main class="content-area">
+            <section id="about" class="section">
+                <div class="container">
+                        <div style="display: flex;  text-align: left;">
+                            <div class = "image-wrapper">
+                                <img src="media/a1.jpg" alt="Pankaj Kumar" style="width: 200px; height: 200px; border-radius: 50%; margin-bottom: 15px;">
+                                <p class="caption">PhD Student at NISER</p>
+                                <div class="contact-info">
+                                    <p>
+                                        <i class="far fa-envelope"></i>
+                                        <a href="mailto:pankaj.kumar@niser.ac.in">Email</a>
+                                    </p>
+                                    <p>
+                                        <a href="https://www.linkedin.com/in/pankaj-kumar-0b5421265" target="_blank">
+                                            <i class="fab fa-linkedin"></i>
+                                            LinkedIn
+                                        </a>
+                                    </p>
+                                    <p>
+                                        <a href="https://github.com/pankajkumar6002" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                                GitHub
+                                            </a>
+                                    </p>
+                                    <p>
+                                        <a href="https://scholar.google.com/citations?user=XXXX&hl=en" target="_blank">
+                                            <i class="fas fa-graduation-cap"></i> Google Scholar
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class = "about-content">
+                                <h2>About Me</h2>
+                                <p>
+                                         I am a doctoral fellow in Computer Science (Machine Learning) at Dr. Subhankar Mishra’s Lab <a href="https://smlab.niser.ac.in/">(@smlab-niser)</a>,NISER, India. My academic journey began with a strong foundation in mathematics, which equipped me with a rigorous analytical and problem-solving skillset. This background has proven invaluable in my current research, allowing me to approach complex AI/ML challenges with a unique perspective and a deep understanding of the underlying mathematical principles.
+                                </p>
+                                <p>
+                                     My research focuses on <b>NLPs,Geometric deep learning</b>, primarily <b>GNNs</b>. I am particularly interested in developing novel algorithms, exploring new applications, and addressing ethical considerations.
+                                </p>
+                                <p>
+                                     As a researcher, I am committed to contributing to the advancement of AI/ML through innovative research and scholarly contributions.
+                                </p>
+
+                            </div>
+                        </div>
+                </div>
+            </section>
+
+            <section id="research" class="section">
+                <div class="container">
+                    <h2>Research</h2>
+                    <div class="research-items">
+                        <button class="collapsible">Expressivity of Private GNNs</button>
+                        <div class="content">
+                            <div class="date-details">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>Jan 2025 - Present</span>
+                            </div>
+                            <p>Exploration of expressivity of private GNNs, focusing on the trade-off between privacy and expressivity. The project aims to develop a comprehensive understanding of the expressivity of private GNNs and the impact of privacy-preserving mechanisms on their learning capabilities.</p>
+                                <Details>Details will be further updated once project is finished</Details>
+                            </p>
+                            <a href="#" target="_blank">Read More <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+
+                        <button class="collapsible">Survey on Robustness of LLMs</button>
+                        <div class="content">
+                            <div class="date-details">
+                                <i class="far fa-calendar-alt"></i>
+                                <span>Dec 2024 - Present</span>
+                            </div>
+                            <p>Large Language Models (LLMs) have revolutionized numerous fields with their impressive language understanding and generation capabilities. However, their reliability is hindered by several robustness issues, particularly the generation of nonsensical or factually incorrect content, known as hallucinations. This phenomenon poses a considerable challenge to the reliability of LLMs in real-world scenarios.
+                               This survey comprehensively explores these challenges, moving beyond adversarial robustness to focus on critical factors such as out-of-distribution (OOD) generalization, bias and fairness, contextual understanding, and shortcut learning.</p>
+                               <p> <Details>Details will be further updated once project is finished</Details></p>
+                            <a href="#" target="_blank">Read More <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+
+                        <button class="collapsible">Project/Work Title 3</button>
+                        <div class="content">
+                            <div class="date-details">
+                                    <i class="far fa-calendar-alt"></i>
+                                <span>Mar 2023 - Aug 2023</span>
+                            </div>
+                            <p>Brief description of the research, main results and contribution.</p>
+                            <a href="#" target="_blank">Read More <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications" class="section">
+                <div class="container">
+                    <h2>Publications</h2>
+                    <ul>
+                        <li>Kumar, P., "Article Title", Journal/Conference, Year. <a href="#"><i class="fas fa-external-link-alt"></i></a></li>
+                        <li>Kumar, P., "Article Title", Journal/Conference, Year. <a href="#"><i class="fas fa-external-link-alt"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="CV" class="section">
+                <div class="container">
+                    <h2>CV</h2>
+                    <p>
+                        For a detailed overview of my academic and professional background, please refer to my Curriculum Vitae.
+                    </p>
+                    <a href="#" target="_blank">Download CV <i class="fas fa-file-pdf"></i></a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; [Год] Pankaj Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+        document.querySelectorAll('.collapsible').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                    content.style.maxHeight = null;
+                } else {
+                    content.classList.add('show');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
